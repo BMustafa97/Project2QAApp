@@ -21,9 +21,10 @@ db.create_all()
 def home():
     product = requests.get("http://localhost:5003/product")
     result = product.text
-    products = result
-#    db.session.add(result)
-#    db.session.commit()
+    results = Generator(result=result)
+    db.session.add(results)
+    db.session.commit()
+    products = Generator.query.all()
     return render_template("home.html", product=result, products=products)
 
 if __name__ == "__main__":

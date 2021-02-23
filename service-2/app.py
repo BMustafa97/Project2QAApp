@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/firstname')
 def firstname():
-    firstnames = ["Koolios", "Shakedown", "Benny's", "Whippy", "Deli", "Urban", "Lil-Italia", "Pa-Pa-Peri"]
+    firstnames = ["Koolios", "Shakedown", "Benny's", "Whippy", "Deli", "Urban", "Lil-Italia", "Pa-Pa-Peri", "Taco-licious", "Cheesey-Drip", "Pops Diner", "Double-Trouble", "Nashville", "Side-Street"]
     return Response(random.choice(firstnames), mimetype="text")
 #in this service give the user half of their new username
 

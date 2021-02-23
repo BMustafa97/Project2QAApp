@@ -14,6 +14,9 @@ db = SQLAlchemy(app)
 class Generator(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     result = db.Column(db.String(50), nullable=True)
+
+    def __repr__(self):
+        return f"{self.id} | {self.result}"
 db.drop_all()
 db.create_all()
 
@@ -25,6 +28,7 @@ def home():
     db.session.add(results)
     db.session.commit()
     products = Generator.query.all()
+  #  limit = Generator.query.order_by(Generator.id.desc()).limit(5)
     return render_template("home.html", product=result, products=products)
 
 if __name__ == "__main__":

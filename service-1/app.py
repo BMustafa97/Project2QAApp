@@ -4,11 +4,11 @@ import requests
 from application import routes
 import os
 from os import getenv
-import mysql.connector
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://root:root@34.105.121.250/flaskdb"
+#app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://root:root@34.105.121.250/flaskdb"
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///db.sqlite"
 app.config['SECRET_KEY'] = 'YOUR_SECRET_KEY'
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -25,7 +25,7 @@ db.create_all()
 
 @app.route("/home", methods=['GET'])
 def home():
-    product = requests.get("http://34.105.75.14:5003/product")
+    product = requests.get("http://localhost:5003/product")
     result = product.text
     results = Generator(result=result)
     db.session.add(results)

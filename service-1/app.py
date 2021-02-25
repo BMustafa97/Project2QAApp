@@ -8,7 +8,7 @@ import mysql.connector
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://root:root@localhost/flaskdb"
+app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://root:root@34.105.121.250/flaskdb"
 app.config['SECRET_KEY'] = 'YOUR_SECRET_KEY'
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -31,8 +31,6 @@ def home():
     db.session.add(results)
     db.session.commit()
     products = Generator.query.all()
- #   products.execute("SELECT * FROM Generator LIMIT 5 OFFSET 2")
-  #  limit = Generator.query.order_by(Generator.id.desc()).limit(5)
     return render_template("home.html", product=result, products=products)
 
 if __name__ == "__main__":

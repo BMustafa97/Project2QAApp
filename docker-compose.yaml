@@ -1,35 +1,47 @@
 version: '3.7'
 services:
-  database:
-    image: mysql:5.7
-    environment:
-    - MYSQL_ROOT_PASSWORD=root	
-    - MYSQL_DATABASE=flask-db
+  service1:
+    container_name: service1
+    build: ./service1
     ports:
-    - target: 3306
-      published: 3306
+    - target: 5000
+      protocol: tcp
+    depends_on: 
+    - service4
+
+  service2:
+    container_name: service2
+    build: ./service2
+    ports:
+    - target: 5001
+      protocol: tcp
+
+  service3:
+    container_name: service3
+    build: ./service3
+    ports:
+    - target: 5002
+      protocol: tcp
+
+  service4:
+    container_name: service4
+    build: ./service4
+    ports:
+    - target: 5003
+      protocol: tcp
+    depends_on: 
+    - service2
+    - service3
+
+  nginx:
+    image: nginx:latest
+    ports:
+    - target: 80
+      published: 80
       protocol: tcp
     volumes:
-    - type: volume
-      source: db-data
-      target: /var/lib/mysql
-  flask-app-1:
-    image: service1?
-
-  flask-app-2:
-    image: service2?
- 
-  flask-app-3:
-    image: service3
-    deploy: 
-      replicas: 2
-  flask-app-4:
-    image: service4
-    ports: 
-    - target: 5000
-      published: 5000
-    deploy:
-      replicas: 4
-
-volumes:
-  db-data:
+    - type: bind
+      source: ./nginx/nginx.conf
+      target: /etc/nginx/nginx.conf
+    depends_on: 
+    - service1 

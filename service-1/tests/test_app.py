@@ -7,7 +7,6 @@ from unittest.mock import patch
 
 class TestBase(TestCase):
     def create_app(self):
-        app.config['SQLALCHEMY_DATABASE_URI'] ="sqlite:///testdb.sqlite"
         return app
     # Pass in configurations for test database
   #  def setUp(self):

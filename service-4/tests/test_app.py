@@ -9,10 +9,10 @@ class TestBase(TestCase):
     def create_app(self):
         return app
     # Pass in configurations for test database
-class TestPages(TestBase):
-    def test_home(self):
-        response = self.client.get(url_for('product'))
-        self.assertEqual(response.status_code, 200)
+#class TestPages(TestBase):
+#    def test_home(self):
+#       response = self.client.get(url_for('product'))
+#        self.assertEqual(response.status_code, 200)
 
 class TestCase(TestBase):
     def test_get(self):

@@ -9,10 +9,10 @@ class TestBase(TestCase):
     def create_app(self):
         return app
         
-class TestPages(TestBase):
-    def test_home(self):
-        response = self.client.get(url_for('firstname'))
-        self.assertEqual(response.status_code, 200)
+#class TestPages(TestBase):
+#    def test_home(self):
+#        response = self.client.get(url_for('firstname'))
+#        self.assertEqual(response.status_code, 200)
 
 class TestCase(TestBase):
     def test_get(self):

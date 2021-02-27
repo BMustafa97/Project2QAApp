@@ -7,8 +7,8 @@ from os import getenv
 app = Flask(__name__)
 @app.route('/product',methods=['GET'])
 def product():
-    firstname = requests.get("http://localhost:5001/firstname")
-    slogan = requests.get("http://localhost:5002/slogan")
+    firstname = requests.get("http://34.105.121.250:5001/firstname")
+    slogan = requests.get("http://34.105.121.250:5002/slogan")
     return (firstname.text + " : " + slogan.text)
 
 if __name__ == "__main__":

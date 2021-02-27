@@ -16,17 +16,7 @@ class TestPages(TestBase):
 
 class TestCase(TestBase):
     def test_get(self):
-        with patch("requests.get") as g:
-  #          with patch("requests.get") as r:
-                g.return_value.text = "Urban"
-  #              r.return_value.text = "The Best in Manchester."
-
+        with patch("requests.get") as a:
+                a.return_value.text = "Urban"
                 response = self.client.get(url_for("home"))
                 self.assertIn(b"Urban", response.data)
-        
-
-#create a mock test
-#class TestService1(TestBase):
-#    def test_get(self):
-#        response = self.client.get(url_for('home'), follow_redirects=True)
-#        self.assertIn(b'Deli', response.data)

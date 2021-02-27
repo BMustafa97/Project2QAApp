@@ -7,7 +7,6 @@ from unittest.mock import patch
 
 class TestBase(TestCase):
     def create_app(self):
-        app.config['SQLALCHEMY_DATABASE_URI'] ="sqlite:///testdb.sqlite"
         return app
         
 class TestPages(TestBase):
@@ -18,6 +17,6 @@ class TestPages(TestBase):
 class TestCase(TestBase):
     def test_get(self):
         with patch("requests.get") as g:
-                g.return_value.text = "Urban"
-                response = self.client.get(url_for("firstname"))
-                self.assertIn(b"Urban", response.data)
+                g.return_value.text = "Koolios"
+                response = self.client.get(url_for("firstnametest"))
+                self.assertIn(b"Koolios", response.data)

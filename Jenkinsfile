@@ -24,6 +24,7 @@ pipeline {
                 cd ./service-4
                 pytest --cov=app --cov-report=term-missing
                 cd ..
+                '''
             }
         }
         stage('Build'){

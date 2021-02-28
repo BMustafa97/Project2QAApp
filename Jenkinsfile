@@ -48,7 +48,8 @@ pipeline {
                 pwd
                 ls -la
                 cd .docker
-                chmod 777 config.json 
+                pwd
+                sudo chmod 777 config.json 
                 scp -i ./ssh/id_rsa /home/jenkins/.jenkins/workspace/projectpipeline/docker-compose.yaml jenkins@35.197.65.166:docker-compose.yaml
                 ssh -i ./ssh/id_rsa jenkins@35.197.65.166 << EOF
                 export SEC_KEY=${SEC_KEY} 

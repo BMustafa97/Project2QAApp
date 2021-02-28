@@ -41,6 +41,8 @@ pipeline {
         stage('Deploy'){
             steps{
                 sh '''
+                pwd
+                cd ~ && cd /
                 cd /home/jenkins/.docker
                 chmod 777 config.json 
                 scp -i ./ssh/id_rsa /home/jenkins/.jenkins/workspace/projectpipeline/docker-compose.yaml jenkins@35.197.65.166:docker-compose.yaml

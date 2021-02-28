@@ -10,7 +10,7 @@ services:
     - service-4
 
   service-2:
-    image: bmustafa97service-2
+    image: bmustafa97/service-2
     build: ./service-2
     ports:
     - target: 5001

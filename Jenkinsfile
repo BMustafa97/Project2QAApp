@@ -42,9 +42,8 @@ pipeline {
             steps{
                 sh '''
                     cd ansible
-                    pwd
-                    ls -la
                     chmod 666 inventory.yaml playbook.yaml
+                    ls -la
                     ansible-playbook -i inventory.yaml playbook.yaml
                     '''     
             }

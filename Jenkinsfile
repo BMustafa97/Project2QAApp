@@ -44,6 +44,7 @@ pipeline {
                     cd ansible
                     pwd
                     ls -la
+                    chmod 666 inventory.yaml playbook.yaml
                     ansible-playbook -i inventory.yaml playbook.yaml
                     '''     
             }

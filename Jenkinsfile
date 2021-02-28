@@ -41,7 +41,7 @@ pipeline {
         stage('Deploy'){
             steps{
                 sh 'chmod +x ./scripts/deploy.sh'
-                sh './scripts/deploy.sh'
+                sh 'docker stack deploy --compose-file docker-compose.yaml project2app'
             }
         }                   
     }

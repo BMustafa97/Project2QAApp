@@ -43,6 +43,7 @@ pipeline {
                 sh '''
                     cd ansible
                     pwd
+                    ls -la
                     ansible-playbook -i inventory.yaml playbook.yaml
                     '''     
             }

@@ -38,6 +38,13 @@ pipeline {
                 '''
             }
         }
+        stage("Ansible"){
+            steps{
+                script{
+                        sh "cd ansible && ansible-playbook -i inventory.yaml playbook.yaml"
+                    }
+                }
+            }
         stage('Deploy'){
             steps{
                 sh '''

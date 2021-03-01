@@ -52,10 +52,6 @@ pipeline {
             steps{
                 sh '''
                     ssh -i ~/.ssh/jenkins_agent_key manager << EOF
-                    sudo rm -rf Project2QAApp
-                    git clone https://github.com/BMustafa97/Project2QAApp
-                    cd Project2QAApp
-                    docker stack rm restaurant-gen
                     docker stack deploy --compose-file docker-compose.yaml restaurant-gen
                     EOF
                 '''

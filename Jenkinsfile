@@ -54,11 +54,12 @@ pipeline {
                     pwd
                     ls -la
                     scp -i ~/.ssh/id_rsa docker-compose.yaml jenkins@manager:/home/jenkins/docker-compose.yaml
-                    ssh -i ~/.ssh/id_rsa jenkins@manager
+                    ssh -i ~/.ssh/id_rsa jenkins@manager << EOF
                     cd /
                     cd home/jenkins
                     ls -la
                     docker stack deploy --compose-file docker-compose.yaml restaurant-gen
+                    EOF
                     '''
             }
         }                   

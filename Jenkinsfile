@@ -57,7 +57,22 @@ pipeline {
                     cd home/jenkins
                     docker stack deploy --compose-file docker-compose.yaml restaurant-gen
                     '''
+            } 
+        }
+        stage('LoadBalancer'){
+            steps{
+                sh 'scp nginx/nginx.conf jenkins@35.197.65.166:nginx'
+                sh "ssh jenkins@35.197.117.176 docker container rm -f nginx-loadbalancer"
+                sh "ssh jenkins@35.197.117.176 docker run -d -p 80:80 --name nginx-loadbalancer --mount type=bind,source=/home/jenkins/nginx.conf,target=/etc/nginx/nginx.conf nginx:alpine"
+
             }
+        }
+    }
+}
+
+               
+         
+
         }                   
     }
 }

@@ -15,7 +15,6 @@ services:
     build: ./service-2
     ports:
     - target: 5001
-    - published: 5001
       protocol: tcp
 
   service-3:
@@ -23,7 +22,6 @@ services:
     build: ./service-3
     ports:
     - target: 5002
-    - published: 5002
       protocol: tcp
 
   service-4:
@@ -31,7 +29,6 @@ services:
     build: ./service-4
     ports:
     - target: 5003
-    - published: 5003
       protocol: tcp
     depends_on: 
     - service-2

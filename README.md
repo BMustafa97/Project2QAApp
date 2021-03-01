@@ -29,6 +29,11 @@ Behind all of this Jenkins, Ansible, Docker Swarm/Compose and NGINX are all auto
 <p>Usage of Trello Board to constantly keep me on task and working in an organised manner.</p>
 <img width="823" alt="Trello" src="https://user-images.githubusercontent.com/66776309/109551603-a9750b00-7ac8-11eb-9fdf-b2f6defb7e8a.png">
 <p>My board allowed me to prioritise and understand different aspects of this project. It created a linear methodology of content creating which I really enjoyed.</p>
+<h2 id="website">Website</h2>
+<img width="488" alt="website1" src="https://user-images.githubusercontent.com/66776309/109554185-d1b23900-7acb-11eb-9a7b-ec0961a7fed6.png">
+As you can see the app is providing the User with a random name and slogan upon refreshing the page.
+<img width="424" alt="website2" src="https://user-images.githubusercontent.com/66776309/109554317-f9a19c80-7acb-11eb-8600-8ddc1631adb8.png">
+<p>The website also has the ability to persist this unique data to a MySql Database.</p>
 <h2 id="cicd-pipeline">CI/CD Pipeline</h2>
 <p>Below is an overview of the technologies used in implementing this Project. From tracking progress on my Trello Board to creating content in Python through Visual Studio. Then adding, committing and pushing these changes to GitHub. Automating containerisation through Jenkins as well as configuration through Jenkins inspired Ansible to finally deploying the app.</p>
 <img width="651" alt="CI CD pipeline" src="https://user-images.githubusercontent.com/66776309/109552161-60718680-7ac9-11eb-8794-412861ccaf22.png">
@@ -48,6 +53,7 @@ Behind all of this Jenkins, Ansible, Docker Swarm/Compose and NGINX are all auto
 <ul>
 <li>Use of CSS and Javascript to create an appealing front-end experience</li>
 <li>Allow for an Image/Logo to be in relation to output</li>
+<li>Create a button which refreshes the page for User compatibility</li>
 <li>Further enhancement of project specification by including more services and more different requests</li>
 </ul>
 <p><strong>Acknowledgements</strong><br>

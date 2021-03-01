@@ -51,6 +51,8 @@ pipeline {
         stage('Deploy'){
             steps{
                 sh '''
+                    pwd
+                    ls -la
                     scp -i ~/.ssh/id_rsa docker-compose.yaml jenkins@manager:/home/jenkins/docker-compose.yaml
                     ssh -i ~/.ssh/id_rsa jenkins@manager
                     whoami

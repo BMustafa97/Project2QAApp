@@ -1,9 +1,9 @@
   
 all:
   children:
-    docker:
+    jenkins:
       hosts:
-        35.247.17.54:
+        35.197.65.166:
     manager:
       hosts:      
         34.105.75.14:

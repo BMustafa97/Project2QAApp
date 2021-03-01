@@ -3,7 +3,7 @@
 
 ---
 
-<p>**</p>
+<p>***</p>
 <h2 id="project-brief">Project Brief</h2>
 <p>The brief set for this project is to create a service-orientated architecture for my application, with the tools, methodologies and technologies that cover all core modules covered during training. The application must be composed of at least four services that work together.</p>
 <h3 id="requirements">Requirements</h3>

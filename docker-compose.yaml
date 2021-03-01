@@ -1,7 +1,6 @@
 version: '3.7'
 services:
   service-1:
-    container-name: service-1
     image: bmustafa97/service-1
     build: ./service-1
     ports:

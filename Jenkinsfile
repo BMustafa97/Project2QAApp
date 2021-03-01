@@ -56,7 +56,6 @@ pipeline {
                     cd /
                     cd home/jenkins
                     docker stack deploy --compose-file docker-compose.yaml restaurant-gen
-                    EOF
                     '''
             }
         }                   

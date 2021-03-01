@@ -34,6 +34,8 @@ Behind all of this Jenkins, Ansible, Docker Swarm/Compose and NGINX are all auto
 <img width="651" alt="CI CD pipeline" src="https://user-images.githubusercontent.com/66776309/109552161-60718680-7ac9-11eb-8794-412861ccaf22.png">
 <h2 id="jenkins-pipeline">Jenkins Pipeline</h2>
 <p>Jenkins was the heart and soul of the automation of this project. Using a pipeline build I automated many mundane tasks through commands in my Jenkinsfile which further triggered other automatic processes such as building images then pushing them to DockerHub and so on.</p>
+<p>Below is a successful pipeline showing the various stages of automation.</p>
+<img width="700" alt="jenkinspipeine" src="https://user-images.githubusercontent.com/66776309/109553126-8a777880-7aca-11eb-8c7a-11ad3651cb5d.png">
 <h2 id="testing">Testing</h2>
 <p>I tested my various services through Pytesting. I conducted unit tests as well as Mock tests, the unit tests ensured the page was running as was hoped whilst the mock tests tested functionality. Below is an example of testing passing and a coverage of 96% being achieved.</p>
 <img width="506" alt="project2 tests" src="https://user-images.githubusercontent.com/66776309/109541016-2d27fb00-7abb-11eb-8f44-a0498c8bce2c.png">

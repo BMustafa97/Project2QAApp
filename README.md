@@ -61,3 +61,5 @@ QA Training Academy for allowing me to develop and implement skills I was previo
 <p><strong>Author</strong><br>
 Bilal Mustafa</p>
 
+<p>Feel free to clone or fork and play with my project! If you have any queries don't be hesitant in contacting me on Instagram @thecoder17.</p>
+

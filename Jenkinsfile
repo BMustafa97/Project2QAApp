@@ -68,6 +68,7 @@ pipeline {
                     git clone https://github.com/BMustafa97/Project2QAApp.git
                     cd Projects2QAApp/nginx/
                     docker-compose up -d
+                    '''
             }
         }
     }

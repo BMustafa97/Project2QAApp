@@ -25,7 +25,7 @@ db.create_all()
 
 @app.route("/home", methods=['GET'])
 def home():
-    product = requests.get("http://35.197.65.166:5003/product")
+    product = requests.get("http://service-4:5003/product")
     result = product.text
     results = Generator(result=result)
     db.session.add(results)

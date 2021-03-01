@@ -26,10 +26,28 @@ Behind all of this Jenkins, Ansible, Docker Swarm/Compose and NGINX are all auto
 <p>I used an iterative method by simply creating a functional app at first with successful tests, then moving on to enable it’s dockerised capabilities through Dockerfiles and a docker-compose.yaml.  I then incorporated the use of Jenkins to build the various steps of Testing, Building and Deploying at that stage. Then I configured VM’s via Ansible and an NGINX load-balancer.</p>
 <p>**</p>
 <h2 id="project-management">Project Management</h2>
+<p>Usage of Trello Board to constantly keep me on task and working in an organised manner.</p>
+<img width="823" alt="Trello" src="https://user-images.githubusercontent.com/66776309/109551603-a9750b00-7ac8-11eb-9fdf-b2f6defb7e8a.png">
+<p>My board allowed me to prioritise and understand different aspects of this project. It created a linear methodology of content creating which I really enjoyed.</p>
 <h2 id="cicd-pipeline">CI/CD Pipeline</h2>
+<p>Below is an overview of the technologies used in implementing this Project. From tracking progress on my Trello Board to creating content in Python through Visual Studio. Then adding, committing and pushing these changes to GitHub. Automating containerisation through Jenkins as well as configuration through Jenkins inspired Ansible to finally deploying the app.</p>
+<img width="651" alt="CI CD pipeline" src="https://user-images.githubusercontent.com/66776309/109552161-60718680-7ac9-11eb-8794-412861ccaf22.png">
 <h2 id="jenkins-pipeline">Jenkins Pipeline</h2>
+<p>Jenkins was the heart and soul of the automation of this project. Using a pipeline build I automated many mundane tasks through commands in my Jenkinsfile which further triggered other automatic processes such as building images then pushing them to DockerHub and so on.</p>
 <h2 id="testing">Testing</h2>
+<p>I tested my various services through Pytesting. I conducted unit tests as well as Mock tests, the unit tests ensured the page was running as was hoped whilst the mock tests tested functionality. Below is an example of testing passing and a coverage of 96% being achieved.</p>
+<img width="506" alt="project2 tests" src="https://user-images.githubusercontent.com/66776309/109541016-2d27fb00-7abb-11eb-8f44-a0498c8bce2c.png">
 <h2 id="risk-assessment">Risk Assessment</h2>
-<p>Improvements<br>
-…</p>
+<p><strong>My initial risk-assessment</strong></p>
+<img width="575" alt="risk assessment" src="https://user-images.githubusercontent.com/66776309/109549027-49c93080-7ac5-11eb-8e08-4daf1b63e5f8.png">
+<p>Whilst carrying out the project I realised I needed to update my Risk Assessment as a few more risks had emerged.<br>
+<img width="488" alt="riskassessment2" src="https://user-images.githubusercontent.com/66776309/109548873-138bb100-7ac5-11eb-8385-65941a7c5be5.png"></p>
+<p><strong>Further Enhancements</strong></p>
+<ul>
+<li>Use of CSS and Javascript to create an appealing front-end experience</li>
+<li>Allow for an Image/Logo to be in relation to output</li>
+<li>Further enhancement of project specification by including more services and more different requests</li>
+</ul>
+<p><strong>Acknowledgements</strong><br>
+QA Training Academy for allowing me to develop and implement skills I was previously oblivious to.</p>
 

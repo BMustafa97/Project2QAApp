@@ -56,7 +56,18 @@ pipeline {
                     cd /
                     cd home/jenkins
                     docker stack deploy --compose-file docker-compose.yaml restaurant-gen
+                    EOF
                     '''
+            }
+        }    
+        stage('NGINX'){
+            steps{
+                sh '''
+                    ssh -i ~/.ssh/jenkins_agent_key nginx << EOF
+                    sudo rm -rf Project2QAApp
+                    git clone https://github.com/BMustafa97/Project2QAApp.git
+                    cd Projects2QAApp/nginx/
+                    docker-compose up -d
             }
         }
     }

@@ -57,7 +57,8 @@ pipeline {
                     pwd
                     cd /
                     cd home/jenkins
-                    docker stack deploy --compose-file /home/jenkins/docker-compose.yaml restaurant-gen
+                    ls -la
+                    docker stack deploy --compose-file docker-compose.yaml restaurant-gen
                     '''
             }
         }                   

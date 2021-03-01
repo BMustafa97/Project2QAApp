@@ -51,20 +51,10 @@ pipeline {
         stage('Deploy'){
             steps{
                 sh '''
-                pwd
-                cd ~ && cd /
-                pwd
-                cd /home/jenkins
-                pwd
-                ls -la
-                cd .docker
-                pwd
-                sudo chmod 777 config.json 
-                scp -i ~/.ssh/id_rsa /home/jenkins/.jenkins/workspace/projectpipeline/docker-compose.yaml jenkins@35.197.65.166:docker-compose.yaml
-                ssh -i ~/.ssh/id_rsa jenkins@35.197.65.166 << EOF
                 export SEC_KEY=${SEC_KEY} 
                 export DB_URI=${DB_URI} 
-                docker stack deploy --compose-file docker-compose.yaml restraunt-gen
+                docker stack rm restaurant-gen
+                docker stack deploy --compose-file docker-compose.yaml restaurant-gen
                 '''
             }
         }                   

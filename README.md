@@ -53,3 +53,5 @@ Behind all of this Jenkins, Ansible, Docker Swarm/Compose and NGINX are all auto
 <p><strong>Acknowledgements</strong><br>
 QA Training Academy for allowing me to develop and implement skills I was previously oblivious to.</p>
 
+<p>Bilal Mustafa</p>
+

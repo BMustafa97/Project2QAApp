@@ -51,8 +51,9 @@ pipeline {
         stage('Deploy'){
             steps{
                 sh '''
-                    ssh -i ~/.ssh/jenkins_agent_key manager << EOF
-                    docker stack deploy --compose-file docker-compose.yaml restaurant-gen
+                    scp -i ~/.ssh/id_rsa docker-compose.yml jenkins@manager:/home/jenkins/docker-compose.yaml
+                    ssh -i ~/.ssh/id_rsa jenkins@manager << EOF
+                    docker stack deploy --compose-file /home/jenkins/docker-compose.yaml restaurant-gen
                     EOF
                 '''
             }

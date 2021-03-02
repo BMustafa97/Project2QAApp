@@ -21,6 +21,9 @@
 <p>**</p>
 <h2 id="microservice-architecture">Microservice-architecture</h2>
 <p>My project consists of many moving parts, at the very base I have a total of four services which all interact with one another. Service 2 &amp; 3 would both generate a name and slogan from a pre-populated string, randomly. Service 4 would then make requests to both <strong>API’s</strong> and consolidate this new information which would then be requested by Service 1. Service 1 would then interact with the user and provide them with their desired output as well as persist data to a database so the User could access said data.<br>
+  
+  <img width="336" alt="microservice architecture" src="https://user-images.githubusercontent.com/66776309/109634545-43789a00-7b41-11eb-92a6-e5e855d76ad0.png">
+
 Behind all of this <strong>Jenkins</strong>, <strong>Ansible</strong>, <strong>Docker Swarm/Compose</strong> and <strong>NGINX</strong> are all automating various tasks. Credit to <strong>Jenkins</strong> for being the centre point to this complex architecture.</p>
 <h2 id="my-strategy">My Strategy</h2>
 <p>I used an <em>iterative method</em> by simply creating a functional app at first with successful tests, then moving on to enable it’s <em>dockerised</em> capabilities through <strong>Dockerfiles</strong> and a docker-compose.yaml.  I then incorporated the use of <strong>Jenkins</strong> to build the various steps of <strong>Testing, Building and Deploying</strong> at that stage. Then I configured VM’s via <strong>Ansible</strong> and an <strong>NGINX</strong> <strong>load-balancer</strong>.</p>

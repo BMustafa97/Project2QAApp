@@ -62,6 +62,9 @@ pipeline {
         stage('NGINX'){
             steps{
                 sh '''
+                    whoami
+                    pwd
+                    ls -la
                     ssh -i ~/.ssh/jenkins_agent_key nginx << EOF
                     sudo rm -rf Project2QAApp
                     git clone https://github.com/BMustafa97/Project2QAApp.git

@@ -66,7 +66,7 @@ pipeline {
                     sudo rm -rf Project2QAApp
                     git clone https://github.com/BMustafa97/Project2QAApp.git
                     cd Projects2QAApp/nginx/
-                    docker-compose up -d
+                    sudo docker-compose up -d
                     '''
             }
         }

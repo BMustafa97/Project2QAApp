@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   service-1:
-    image: bmustafa97/service-1:latest
+    image: bmustafa97/service-1
     build: ./service-1
     deploy:
       replicas: 2
@@ -12,19 +12,19 @@ services:
     - service-4
 
   service-2:
-    image: bmustafa97/service-2:latest
+    image: bmustafa97/service-2
     build: ./service-2
     deploy:
       replicas: 2
 
   service-3:
-    image: bmustafa97/service-3:latest
+    image: bmustafa97/service-3
     build: ./service-3
     deploy:
       replicas: 2
 
   service-4:
-    image: bmustafa97/service-4:latest
+    image: bmustafa97/service-4
     build: ./service-4
     deploy:
       replicas: 2

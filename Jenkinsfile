@@ -33,7 +33,7 @@ pipeline {
 
                     docker-compose down --rmi all
                     docker-compose build
-                    sudo docker login -u bmustafa97 -p password17
+                    sudo docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
                     sudo docker-compose push
                     '''
             }
